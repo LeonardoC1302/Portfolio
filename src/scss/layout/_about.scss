@@ -2,7 +2,9 @@
 @use 'base/mixins' as m;
 
 .about{
-    height: 100vh;
+    @include m.tablet{
+        height: 100vh;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;

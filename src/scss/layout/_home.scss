@@ -3,13 +3,13 @@
 
 .home{
     @include m.md-container;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5rem;
     @include m.tablet{
+        height: 90vh;
         flex-direction: row;
         gap: 10rem;
     }

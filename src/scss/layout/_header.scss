@@ -5,10 +5,10 @@
     background-color: darken(v.$background, 5%);
     color: v.$blue;
     &__container{
-        height: 10vh;
         display: flex;
         justify-content: center;
         @include m.tablet{
+            height: 10vh;
             justify-content: space-between;
         }
         align-items: center;
