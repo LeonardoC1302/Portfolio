@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    &__container{
+        @include m.md-container;
+        @include m.tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__image{
+        @include m.tablet{
+            height: 30rem;
+            width: auto;
+        }
+        width: 30rem;
+    }
+
+    &__docs{
+        display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        @include m.tablet{
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            align-items: center;
+            justify-content: left;
+            margin: 0;
+        }
+    }
+
+    &__link{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}

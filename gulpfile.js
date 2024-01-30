@@ -1,82 +1,87 @@
-const { src, dest, watch, parallel } = require('gulp'); // Load gulp
+const { src, dest, watch, parallel } = require('gulp');
 
 // CSS
-const sass = require('gulp-sass')(require('sass')); // Load gulp-sass
-const plumber = require('gulp-plumber'); // Load gulp-plumber}
-const autoprefixer = require('autoprefixer'); // Load autoprefixer
-const cssnano = require('cssnano'); // Load cssnano
-const postcss = require('gulp-postcss'); // Load gulp-postcss
-const sourcemaps = require('gulp-sourcemaps'); // Load gulp-sourcemaps
+const sass = require('gulp-sass')(require('sass'));
+const plumber = require('gulp-plumber');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
 
-// IMAGES
-const cache = require('gulp-cache'); // Load gulp-cache
-const imagemin = require('gulp-imagemin'); // Load gulp-imagemin
-const webp = require('gulp-webp'); // Load gulp-webp
-const avif = require('gulp-avif'); // Load gulp-avif
+// Imagenes
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
-// JAVASCRIPT
-const terser = require('gulp-terser-js'); // Load gulp-terser
+// Javascript
+const terser = require('gulp-terser-js');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename')
 
-function css(done){
-    src('src/scss/**/*.scss') // Identify all the SASS files
-        .pipe( sourcemaps.init() ) // Initialize sourcemaps
-        .pipe( plumber() ) // Prevent pipe breaking caused by errors from gulp plugins
-        .pipe( sass() ) // Compile SASS to CSS
-        .pipe( postcss([autoprefixer(), cssnano()]) ) // Add prefixes and minify CSS
-        .pipe( sourcemaps.write('.') ) // Write sourcemaps
-        .pipe( dest('build/css') ); // Save CSS
-    done(); // Finish task
+
+const paths = {
+    scss: 'src/scss/**/*.scss',
+    js: 'src/js/**/*.js',
+    imagenes: 'src/img/**/*'
+}
+function css() {
+    return src(paths.scss)
+        .pipe( sourcemaps.init())
+        .pipe( sass({outputStyle: 'expanded'}))
+        // .pipe( postcss([autoprefixer(), cssnano()]))
+        .pipe( sourcemaps.write('.'))
+        .pipe(  dest('build/css') );
+}
+function javascript() {
+    return src(paths.js)
+        .pipe(sourcemaps.init())
+        .pipe(concat('bundle.js')) 
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(dest('build/js'))
 }
 
-function images(done){
-    const options = {
-        optimizationLevel: 3 // Optimization level of the images
-    }
-    src('src/img/**/*.{png, jpg}') // Identify all the images
-        .pipe( cache(imagemin(options)) ) // Optimize images
-        .pipe( dest('build/img') ); // Save images
+function imagenes() {
+    return src(paths.imagenes)
+        .pipe( cache(imagemin({ optimizationLevel: 3})))
+        .pipe( dest('build/img'))
+}
+
+function versionWebp( done ) {
+    const opciones = {
+        quality: 50
+    };
+    src('src/img/**/*.{png,jpg}')
+        .pipe( webp(opciones) )
+        .pipe( dest('build/img') )
     done();
 }
 
-function webpVersion(done){
-    const options = {
-        quality: 50 // Quality of the images
-    }
-    src('src/img/**/*.{jpg,png}') // Identify all the images
-        .pipe( webp(options) ) // Convert images to webp
-        .pipe( dest('build/img') ); // Save webp images
+function versionAvif( done ) {
+    const opciones = {
+        quality: 50
+    };
+    src('src/img/**/*.{png,jpg}')
+        .pipe( avif(opciones) )
+        .pipe( dest('build/img') )
     done();
 }
 
-function avifVersion(done){
-    const options = {
-        quality: 50 // Quality of the images
-    }
-    src('src/img/**/*.{jpg,png}') // Identify all the images
-        .pipe( avif(options) ) // Convert images to avif
-        .pipe( dest('build/img') ); // Save avif images
-    done();
+function dev(done) {
+    watch( paths.scss, css );
+    watch( paths.js, javascript );
+    watch( paths.imagenes, imagenes)
+    watch( paths.imagenes, versionWebp)
+    watch( paths.imagenes, versionAvif)
+    done()
 }
 
-function javascript(done){
-    src('src/js/**/*.js') // Identify all the JS files
-        .pipe( sourcemaps.init() ) // Initialize sourcemaps
-        .pipe(terser()) // Minify JS
-        .pipe( sourcemaps.write('.') ) // Write sourcemaps
-        .pipe( dest('build/js') ); // Save JS
-    done(); // Finish task  
-}
-
-function dev(done){
-    watch('src/scss/**/*.scss', css); // Watch changes in SASS files
-    watch('src/js/**/*.js', javascript); // Watch changes in JS files
-    done(); // Finish task
-}
-
-exports.css = css; // Export task
-exports.javascript = javascript; // Export task
-exports.dev = parallel(images, webpVersion, avifVersion, javascript, dev); // Export task
-exports.default = parallel(images, webpVersion, avifVersion, javascript, dev); // Export task
-exports.webpVersion = webpVersion; // Export task
-exports.avifVersion = avifVersion; // Export task
-exports.images = images; // Export task
+exports.css = css;
+exports.js = javascript;
+exports.imagenes = imagenes;
+exports.versionWebp = versionWebp;
+exports.versionAvif = versionAvif;
+exports.dev = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev) ;
+exports.default = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev) ;

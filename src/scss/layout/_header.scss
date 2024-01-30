@@ -2,18 +2,36 @@
 @use 'base/mixins' as m;
 
 .header{
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include m.container;
+    background-color: darken(v.$background, 5%);
+    color: v.$blue;
+    &__container{
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        @include m.tablet{
+            justify-content: space-between;
+        }
+        align-items: center;
+        @include m.container;
+    }
+    &__logo{
+        @include m.tablet{
+            background-image: url(../img/logo.png);
+            background-size: cover;
+            width: 8rem;
+            height: 5rem;
+        }
+    }
     .navigation{
         display: flex;
         align-items: center;
         gap: 3rem;
         &__link{
+            color: v.$white;
             &:hover{
-
+                font-weight: v.$bold;
+                color: v.$blue;
+                border-bottom: 1.5px solid v.$blue;
             }
         }
     }

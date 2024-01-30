@@ -1,21 +1,50 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.about{
+.home{
     @include m.md-container;
     height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    @include m.tablet{
+        flex-direction: row;
+        gap: 10rem;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+    &__image-container{
+        order: -1;
+        width: 30rem;
+        @include m.tablet{
+            order: unset;
+            width: 50rem;
+        }
+        border-radius: 65% 35% 58% 42% / 64% 55% 45% 36%;
+        overflow: hidden;
+    }
+    &__image{
+        height: auto;
+    }
     &__title{
         text-align: left;
+        margin: 0;
     }
     &__description{
-
+        margin: 0;
+    }
+    &__more{
+        margin: 1rem 0;
+        font-weight: v.$thin;
     }
     &__socials{
-        @include m.social-menu(v.$black, 2.5rem);
+        @include m.social-menu(v.$blue, 2.5rem);
         display: flex;
         gap: 2rem;
         margin-top: 2rem;

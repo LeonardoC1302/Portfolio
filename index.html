@@ -6,43 +6,241 @@
     <title>Leonardo Céspedes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <header class="header">
-    <nav class="navigation">
-        <a class="navigation__link" href="#about">About Me</a>
-        <a class="navigation__link" href="#projects">Projects</a>
-        <a class="navigation__link" href="#skills">Skills</a>
-        <a class="navigation__link" href="#contact">Contact</a>
-    </nav>
-    <i class="fa-solid fa-circle-half-stroke dark-mode"></i>
+    <div class="header__container">
+        <a class="header__logo" href="#home"></a>
+        <nav class="navigation">
+            <a class="navigation__link" href="#about">About Me</a>
+            <a class="navigation__link" href="#projects">Projects</a>
+            <a class="navigation__link" href="#skills">Skills</a>
+            <a class="navigation__link" href="#profile">Profile</a>
+        </nav>
+    </div>
 </header>
 
 <body>
+    <section id="home" class="home">
+        <div class="home__info">
+            <h2 class="home__title">I'm Leonardo Céspedes</h2>
+            <p class="home__description"><span>Computer science</span> student and passionate <span>full stack web developer</span>.</p>
+            <a class="home__more" href="#">See more about me &rarr;</a>
+            <nav class="home__socials">
+                <a class="home__socials__link" href="https://www.linkedin.com/in/leonardocespedest/" target="_blank">
+                    <span class="home__socials__hide">LinkedIn</span>
+                </a>
+                <a class="home__socials__link" href="https://github.com/LeonardoC1302" target="_blank">
+                    <span class="home__socials__hide">GitHub</span>
+                </a>
+                <a class="home__socials__link" href="https://twitter.com/LeoCespedes1302" target="_blank">
+                    <span class="home__socials__hide">Twitter</span>
+                </a>
+            </nav>
+        </div>
+        <div class="home__image-container" data-aos="fade-left" data-aos-duration="1500">
+            <picture>
+                <source srcset="build/img/fotoPersonal.avif" type="image/avif">
+                <source srcset="build/img/fotoPersonal.webp" type="image/webp">
+                <img class="home__image" src="build/img/fotoPersonal.jpg" alt="DevWebCamp Image" loading="lazy" width="200" height="300">
+            </picture>
+        </div>
+
+    </section>
+
     <section id="about" class="about">
-        <h2 class="about__title">I'm Leonardo Céspedes</h2>
-        <p class="about__description">Computer science student and passionate full stack web developer.</p>
-        <a class="about__more" href="#">See more about me &rarr;</a>
-        <nav class="about__socials">
-            <a class="about__socials__link" href="linkedin.com" target="_blank">
-                <span class="about__socials__hide">LinkedIn</span>
-            </a>
-            <a class="about__socials__link" href="github.com" target="_blank">
-                <span class="about__socials__hide">GitHub</span>
-            </a>
-            <a class="about__socials__link" href="twitter.com" target="_blank">
-                <span class="about__socials__hide">Twitter</span>
-            </a>
-        </nav>
+        <h2 class="about__heading" data-aos="fade-down">About Me</h2>
+        <div class="about__content">
+            <img data-aos="fade-right" class="about__image " src="build/img/codeImage.svg" alt="About Image">
+            <p class="about__description"  data-aos="zoom-in" data-aos-duration="1500">Hey there! I'm currently on the tech journey at <span>Technological Institute of Costa Rica</span>, exploring the awesomeness of software engineering. As a quick learner, I found my passion for <span>web development</span> through personal coding challenges and online computer science courses. As a college student, I'm on the lookout for an <span>internship or a part-time job</span> that lets me get valuable work experience while I finish my studies.</p>
+        </div>
     </section>
-
     <section id="projects" class="projects">
-        <p>Hola</p>
+        <h2 class="projects__heading">My Recent Work</h2>
+        <div class="projects__container">
+            <div class="project" data-aos="zoom-in">
+                <div class="project__image-container">
+                    <picture>
+                        <source srcset="build/img/devwebcamp.avif" type="image/avif">
+                        <source srcset="build/img/devwebcamp.webp" type="image/webp">
+                        <img class="project__image" src="build/img/devwebcamp.jpg" alt="DevWebCamp Image" loading="lazy" width="200" height="300">
+                    </picture>
+                </div>
+                <div class="project__info">
+                    <h3 class="project__title">DevWebCamp</h3>
+                    <p class="project__description">Developed full stack conference site enabling user registration for development camps. Implemented PayPal payment system for paid virtual and in-person passes. Built admin dashboard to manage conferences, workshops, speakers, users and gifts. Constructed site using MVC architecture for responsive mobile-friendly UI.</p>
+                    <ul class="project__technologies">
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>SAAS</li>
+                        <li>JavaScript</li>
+                        <li>PayPal API</li>
+                        <li>Charts.js</li>
+                        <li>Webpack</li>
+                        <li>Gulp</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/LeonardoC1302/DevWebCamp.git" class="project__link" target="_blank">
+                    View Code
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <div class="project__image-container">
+                    <picture>
+                        <source srcset="build/img/adventureapp.avif" type="image/avif">
+                        <source srcset="build/img/adventureapp.webp" type="image/webp">
+                        <img class="project__image" src="build/img/adventureapp.jpg" alt="AdventureApp Image" loading="lazy" width="200" height="300">
+                    </picture>
+                </div>
+                <div class="project__info">
+                    <h3 class="project__title">AdventureApp</h3>
+                    <p class="project__description">Developed trip planning web app enabling Costa Rica travel reservations and activity selection. Created admin dashboard to manage bookings and offerings. Implemented user authentication system with forgot password functionality. Integrated external API via PHP, CSS, JavaScript, and Fetch leveraging JSON data exchange.</p>
+                    <ul class="project__technologies">
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>SAAS</li>
+                        <li>JavaScript</li>
+                        <li>Gulp</li>
+                        <li>Mailtrap</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/LeonardoC1302/AdventureApp.git" class="project__link" target="_blank">
+                    View Code
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <div class="project__image-container">
+                    <picture>
+                        <source srcset="build/img/realstate.avif" type="image/avif">
+                        <source srcset="build/img/realstate.webp" type="image/webp">
+                        <img class="project__image" src="build/img/realstate.jpg" alt="RealState Image" loading="lazy" width="200" height="300">
+                    </picture>
+                </div>
+                <div class="project__info">
+                    <h3 class="project__title">Real State</h3>
+                    <p class="project__description">Developed full-stack property listing web application with blog capabilities and admin content management system. Constructed with HTML, CSS, JavaScript, PHP, MySQL leveraging OOP and MVC architecture for optimized code organization and reusability.</p>
+                    <ul class="project__technologies">
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>SAAS</li>
+                        <li>JavaScript</li>
+                        <li>Composer</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/LeonardoC1302/Real-State-MVC.git" class="project__link" target="_blank">
+                    View Code
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
     </section>
-    <section id="skills" class="skills"></section>
-    <section id="contact" class="contact"></section>
+    <section id="skills" class="skills">
+        <h2 class="skills__heading">My Skill Set</h2>
+        <ul class="skills__list">
+            <li class="skill">
+                <i class="fa-brands fa-php"></i>
+                PHP
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-github"></i>
+                Git / GitHub
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-unity"></i>
+                Unity
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-gamepad"></i>
+                C#
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-c"></i>
+                C / C++
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                CSS / SASS
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-html5"></i>
+                HTML
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-keyboard"></i>
+                VSCode
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-js"></i>
+                JavaScript
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-java"></i>
+                Java
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-python"></i>
+                Python
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                MySQL
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                SQL Server
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                PostgreSQL
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                MongoDB
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-node"></i>
+                Node.js
+            </li> <!-- SKILL -->
+        </ul>
+    </section>
 
+    <section id="profile" class="profile">
+        <h2 class="profile__heading">Professional Profile</h2>
+        <div class="profile__container">
+            <div class="profile__info" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                <p>Please feel welcome to review my professional profile documents at your convenience:</p>
+                <div class="profile__docs">
+                    <a href="#" class="profile__link">
+                        Resume
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="#" class="profile__link">
+                        CV
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <img data-aos="fade-left" class="profile__image " src="build/img/codeImage.svg" alt="About Image">
+        </div>
+    </section>
 </body>
+
+<footer class="footer">
+    <p class="footer__text">&copy; 2024 <span>Leonardo Céspedes Tenorio</span>. Some rights reserved.</p>
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </html>
