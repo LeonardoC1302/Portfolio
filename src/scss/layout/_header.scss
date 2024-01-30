@@ -7,8 +7,8 @@
     &__container{
         display: flex;
         justify-content: center;
+        height: 10vh;
         @include m.tablet{
-            height: 10vh;
             justify-content: space-between;
         }
         align-items: center;
