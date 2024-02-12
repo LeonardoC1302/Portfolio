@@ -8,10 +8,12 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    margin-top: 2rem;
     @include m.tablet{
         height: 90vh;
         flex-direction: row;
         gap: 10rem;
+        margin: 0 auto;
     }
     &__info{
         display: flex;
