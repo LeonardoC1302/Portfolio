@@ -85,3 +85,4 @@ exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
 exports.dev = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev) ;
 exports.default = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev) ;
+exports.build = parallel( css, imagenes, versionWebp, versionAvif, javascript) ;
