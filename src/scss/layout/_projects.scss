@@ -29,6 +29,9 @@
             scale: 1.05;
         }
     }
+    &--extend{
+        grid-column: span 3;
+    }
     &__info{
         padding: 0 2rem;
     }
