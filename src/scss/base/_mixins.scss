@@ -80,7 +80,7 @@
     text-align: center;
     font-size: 1.8rem;
     font-weight: v.$thin;
-    color: v.$dark-gray;
+    color: v.$gray;
     margin-bottom: 5rem;
 }
 
@@ -154,7 +154,7 @@
     text-transform: uppercase;
     font-weight: v.$bold;
     &:hover{
-        color: v.$blue;
+        color: v.$green;
         cursor: pointer;
     }
 }
@@ -177,7 +177,7 @@
     margin-top: 1.5rem;
 
     > li{
-        background-color: v.$blue;
+        background-color: v.$green;
         padding: 1rem;
         border-radius: .5rem;
         font-size: 1.4rem;
@@ -199,4 +199,12 @@
 
 @mixin bg-gradient($bgcolor){
     background-image: linear-gradient(to left top, $bgcolor, lighten($bgcolor, 15%));
+}
+
+@mixin tech{
+    background-color: v.$green-dark;
+    color: v.$green-light;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
 }

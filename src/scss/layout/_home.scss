@@ -9,11 +9,17 @@
     align-items: center;
     gap: 5rem;
     margin-top: 2rem;
+    padding: 1rem;
     @include m.tablet{
         height: 90vh;
         flex-direction: row;
-        gap: 10rem;
+        gap: 8rem;
         margin: 0 auto;
+    }
+    &__intro{
+        margin: 0;
+        color: v.$gray;
+        font-size: 1.8rem;
     }
     &__info{
         display: flex;
@@ -37,16 +43,21 @@
     &__title{
         text-align: left;
         margin: 0;
+        font-size: 4.5rem;
+        font-weight: v.$bold;
     }
     &__description{
         margin: 0;
+        font-size: 2rem;
+        color: v.$gray;
     }
     &__more{
         margin: 1rem 0;
         font-weight: v.$thin;
+        color: v.$white;
     }
     &__socials{
-        @include m.social-menu(v.$blue, 2.5rem);
+        @include m.social-menu(v.$green, 2.5rem);
         display: flex;
         gap: 2rem;
         margin-top: 2rem;

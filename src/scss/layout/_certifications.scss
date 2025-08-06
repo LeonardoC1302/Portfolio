@@ -15,10 +15,10 @@
 
 .certification{
     display: block;
-    border: .3rem solid v.$blue;
+    border: .1rem solid darken($color: v.$background, $amount: 5%);
     padding: 2rem;
     border-radius: 1rem;
-    background-color: v.$gray;
+    background-color: v.$background;
     height: 100%;
     transition: all .3s ease-in-out;
     width: calc(90vw);
@@ -30,13 +30,14 @@
     }
     &__date{
         margin: 0;
-        color: v.$white;
+        color: v.$gray;
         font-size: 1.5rem;
     }
     &__course{
         font-size: 2rem;
         margin: 0;
         font-weight: v.$bold;
+        color: v.$white;
         &__skills{
         @include m.reset-list;
         display: flex;
@@ -45,11 +46,7 @@
         margin: 1.5rem 0;
         }
         &__skill{
-            background-color: lighten(v.$blue, 15);
-            color: darken(v.$blue, 15);
-            font-size: 1.5rem;
-            padding: .7rem;
-            border-radius: .5rem;
+            @include m.tech;
         }
     }
 }

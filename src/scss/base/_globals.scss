@@ -15,7 +15,7 @@ body {
     background-color: v.$background;
 }
 p {
-    color: v.$black;
+    color: v.$gray;
     font-size: 2rem;
 }
 .container {
@@ -42,12 +42,12 @@ h1, h2, h3 {
     text-align: center;
 }
 
-h1, h2, h3, a, p{
+h1, h2, h3{
     color: v.$white;
 }
 
 span{
-    color: v.$blue;
+    color: v.$white;
 }
 
 h1 {

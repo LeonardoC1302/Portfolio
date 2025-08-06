@@ -2,6 +2,7 @@
 @use 'base/mixins' as m;
 
 .about{
+    padding: 1rem;
     @include m.tablet{
         height: 100vh;
     }
@@ -17,16 +18,33 @@
         width: 30rem;
     }
     &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @include m.tablet{
-            display: flex;
-            flex-direction: row;
             gap: 4rem;
             align-items: center;
             justify-content: center;
         }
+    }
+
+    &__buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    &__button{
+        border: 1px solid v.$green;
+        padding: 1.8rem;
+        border-radius: 1.2rem;
+        color: v.$white;
+        i{
+            margin-right: .2rem;
+        }
+        &--cv{
+            @extend .about__button;
+            background-color: v.$green;
+        }
     }
 }
