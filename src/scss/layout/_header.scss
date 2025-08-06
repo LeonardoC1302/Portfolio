@@ -3,7 +3,7 @@
 
 .header{
     background-color: darken(v.$background, 5%);
-    color: v.$blue;
+    color: v.$green;
     &__container{
         display: flex;
         justify-content: center;
@@ -16,11 +16,13 @@
         @include m.container;
     }
     &__logo{
+        display: none;
         @include m.tablet{
-            background-image: url(../img/logo.png);
-            background-size: cover;
-            width: 8rem;
-            height: 5rem;
+            display: block;
+            color: v.$white;
+            font-size: 2.3rem;
+            font-weight: v.$bold;
+            font-style: italic;
         }
     }
     .navigation{
@@ -34,9 +36,22 @@
         &__link{
             color: v.$white;
             &:hover{
-                font-weight: v.$bold;
-                color: v.$blue;
-                border-bottom: 1.5px solid v.$blue;
+                //font-weight: v.$bold;
+                color: v.$green;
+                border-bottom: 1.5px solid v.$green;
+            }
+
+            &--resume{
+                border: 2.5px solid v.$green;
+                border-radius: .8rem;
+                color: v.$green;
+                padding: .5rem;
+                text-align: center;
+
+                &:hover{
+                    color: v.$white;
+                    border: 2.5px solid v.$white;
+                }
             }
         }
     }

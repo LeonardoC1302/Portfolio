@@ -13,13 +13,12 @@
 </head>
 <header class="header">
     <div class="header__container">
-        <a class="header__logo" href="#home"></a>
+        <a class="header__logo" href="#home"> < Leo Céspedes /> </a>
         <nav class="navigation">
             <a class="navigation__link" href="#about">About Me</a>
             <a class="navigation__link" href="#projects">Projects</a>
             <a class="navigation__link" href="#certifications">Certifications</a>
             <a class="navigation__link" href="#skills">Skills</a>
-            <a class="navigation__link" href="#profile">Profile</a>
         </nav>
     </div>
 </header>
@@ -27,8 +26,9 @@
 <body>
     <section id="home" class="home">
         <div class="home__info">
-            <h2 class="home__title">I'm Leonardo Céspedes</h2>
-            <p class="home__description"><span>Computer Engineering</span> student and passionate about <span>cybersecurity and DevOps</span>.</p>
+            <p class="home__intro">Hi, my name is</p>
+            <h2 class="home__title">Leonardo Céspedes</h2>
+            <p class="home__description">Computer Engineering student and passionate about <span>Cybersecurity and Web Development</span>.</p>
             <a class="home__more" href="#about">Learn more about me &rarr;</a>
             <nav class="home__socials">
                 <a class="home__socials__link" href="https://www.linkedin.com/in/leonardocespedest/" target="_blank">
@@ -55,8 +55,17 @@
     <section id="about" class="about">
         <h2 class="about__heading" data-aos="fade-down">About Me</h2>
         <div class="about__content">
-            <img data-aos="fade-right" class="about__image " src="build/img/codeImage.svg" alt="About Image">
-            <p class="about__description"  data-aos="zoom-in" data-aos-duration="1500">Hi! I'm Leonardo Céspedes, a <span>Computer Engineering</span> student at the <span>Technological Institute of Costa Rica</span>. My studies have given me a solid foundation for contributing to software projects. I have a strong passion for <span>cybersecurity</span> and <span>DevOps</span>, and I'm always looking to learn more about these exciting fields. With a knack for <span>innovation and problem-solving</span>, I'm ready to take on new challenges and make a meaningful impact in the tech world.
+            <p class="about__description"  data-aos="zoom-in" data-aos-duration="1500">Hi! I'm Leonardo Céspedes, a <span>Computer Engineering</span> student at the <span>Technological Institute of Costa Rica</span>. My studies have given me a solid foundation for contributing to software projects. I have a strong passion for <span>cybersecurity</span> and <span>web development</span>, and I'm always looking to learn more about these exciting fields. With a knack for <span>innovation and problem-solving</span>, I'm ready to take on new challenges and make a meaningful impact in the tech world.</p>
+            <div class="about__buttons">
+                <a href="resume.pdf" class="about__button--cv" target="_blank">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    Download CV
+                </a>
+                <a href="#projects" class="about__button">
+                    <i class="fa-solid fa-code"></i>
+                    View Projects
+                </a>
+            </div>
         </div>
     </section>
     <section id="projects" class="projects">
@@ -346,26 +355,6 @@
                 Node.js
             </li> <!-- SKILL -->
         </ul>
-    </section>
-
-    <section id="profile" class="profile">
-        <h2 class="profile__heading">Professional Profile</h2>
-        <div class="profile__container">
-            <div class="profile__info" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
-                <p>Please feel welcome to review my professional profile documents at your convenience:</p>
-                <div class="profile__docs">
-                    <a href="resume.pdf" class="profile__link" target="_blank">
-                        Resume
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <!-- <a href="#" class="profile__link">
-                        CV
-                        <i class="fas fa-external-link-alt"></i>
-                    </a> -->
-                </div>
-            </div>
-            <img data-aos="fade-left" class="profile__image " src="build/img/resume.svg" alt="About Image">
-        </div>
     </section>
 </body>
 
