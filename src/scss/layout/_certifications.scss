@@ -10,11 +10,14 @@
         align-items:flex-start;
         justify-content:center;
         gap: 2rem;
+        align-items: stretch;
     }
 }
 
 .certification{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: .1rem solid darken($color: v.$background, $amount: 5%);
     padding: 2rem;
     border-radius: 1rem;
@@ -41,9 +44,10 @@
         &__skills{
         @include m.reset-list;
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
         flex-wrap: wrap;
         margin: 1.5rem 0;
+        justify-self: flex-end;
         }
         &__skill{
             @include m.tech;

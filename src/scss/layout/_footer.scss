@@ -2,8 +2,9 @@
 @use 'base/mixins' as m;
 
 .footer{
-    background-color: darken(v.$background, 5%);
     margin: 0;
+    margin-top: 5rem;
+    background-color: darken(v.$background, 5%);
     padding: 2rem;
     p{
         color: v.$white;

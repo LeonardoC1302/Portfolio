@@ -17,8 +17,9 @@
         <nav class="navigation">
             <a class="navigation__link" href="#about">About Me</a>
             <a class="navigation__link" href="#projects">Projects</a>
-            <a class="navigation__link" href="#certifications">Certifications</a>
+            <a class="navigation__link" href="#experience">Experience</a>
             <a class="navigation__link" href="#skills">Skills</a>
+            <a class="navigation__link" href="#certifications">Certifications</a>
         </nav>
     </div>
 </header>
@@ -102,6 +103,31 @@
             <div class="project" data-aos="zoom-in">
                 <div class="project__image-container">
                     <picture>
+                        <source srcset="build/img/prepwise.avif" type="image/avif">
+                        <source srcset="build/img/prepwise.webp" type="image/webp">
+                        <img class="project__image" src="build/img/prepwise.jpg" alt="Prepwise Image" loading="lazy" width="200" height="300">
+                    </picture>
+                </div>
+                <div class="project__info">
+                    <h3 class="project__title">PrepWise</h3>
+                    <p class="project__description">Developed full stack voice-based interview practice platform. It leverages Vapi AI and Gemini API to generate realistic, interactive and custom voice interviews based on predefined information gathered from the user, helping them prepare for real-world interviews with AI generated feedback. The platforms offers interview generation, review and the possibility to retake them if the user wants to.</p>
+                    <ul class="project__technologies">
+                        <li>React</li>
+                        <li>NextJS</li>
+                        <li>Tailwind CSS</li>
+                        <li>Firebase</li>
+                        <li>Vapi AI</li>
+                        <li>Gemini API</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/LeonardoC1302/Interview-AI-Platform.git" class="project__link" target="_blank">
+                    View Code
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div> <!-- PROJECT -->
+            <div class="project" data-aos="zoom-in">
+                <div class="project__image-container">
+                    <picture>
                         <source srcset="build/img/adventureapp.avif" type="image/avif">
                         <source srcset="build/img/adventureapp.webp" type="image/webp">
                         <img class="project__image" src="build/img/adventureapp.jpg" alt="AdventureApp Image" loading="lazy" width="200" height="300">
@@ -150,7 +176,7 @@
                     <i class="fas fa-external-link-alt"></i>
                 </a>
             </div> <!-- PROJECT -->
-            <div class="project project" data-aos="zoom-in">
+            <div class="project" data-aos="zoom-in">
                 <div class="project__info">
                     <h3 class="project__title">HTTP Server</h3>
                     <p class="project__description">Developed a multi-threaded HTTP server supporting core HTTP methods with cookies management. Implemented using Rust, with concurrency handled through threads to ensure efficient handling of multiple client requests. Designed to avoid deadlocks and data collisions using synchronization techniques. Server functionality was tested extensively with Postman and Rust unit tests. Documented with user instructions and unit tests for code reliability.</p>
@@ -168,7 +194,7 @@
                     <i class="fas fa-external-link-alt"></i>
                 </a>
             </div> <!-- PROJECT -->
-            <div class="project project" data-aos="zoom-in">
+            <div class="project" data-aos="zoom-in">
                 <div class="project__info">
                     <h3 class="project__title">CTF Cybersecurity</h3>
                     <p class="project__description">A hands-on cybersecurity multiple challenges across categories like Pwn, Web, and Reverse Engineering. Key tasks included exploiting buffer overflow vulnerabilities, bypassing input validation via XSS and code injection, reverse engineering binaries to uncover hardcoded credentials, and leveraging SSRF to leak sensitive files. Tools like GDB, Burp Suite, Ghidra, and Angr were used to analyze, debug, and exploit vulnerabilities.</p>
@@ -190,7 +216,7 @@
                     <i class="fas fa-external-link-alt"></i>
                 </a>
             </div> <!-- PROJECT -->
-            <div class="project project" data-aos="zoom-in">
+            <div class="project project--extend" data-aos="zoom-in">
                 <div class="project__info">
                     <h3 class="project__title">Weakness Identification</h3>
                     <p class="project__description">A comprehensive static code analysis of Wireshark's lemon.c, focusing on identifying CWEs using tools like Flawfinder, Cppcheck, Splint, and Frama-C. Key findings included race conditions, format string vulnerabilities, improper input validation, and memory leaks. Manual analysis validated automated tool results, distinguishing false positives from critical vulnerabilities.</p>
@@ -211,6 +237,119 @@
             </div> <!-- PROJECT -->
         </div>
     </section>
+
+    <section id="experience" class="experience">
+        <h2 class="experience__heading">Work Experience</h2>
+        <article class="experience__element experience__element--active">
+            <p class="experience__date">Aug 2025 &rarr; Present</p>
+            <div class="experience__info">
+                <h3 class="experience__title">Associate Software Developer</h3>
+                <p class="experience__company">Konrad Group</p>
+            </div>
+        </article> <!-- Experience Element-->
+
+        <article class="experience__element">
+            <p class="experience__date">Sep 2024 &rarr; Jul 2025</p>
+            <div class="experience__info">
+                <h3 class="experience__title">Research Assistant</h3>
+                <p class="experience__company">Centro de Investigacion en Computacion</p>
+            </div>
+        </article> <!-- Experience Element-->
+
+        <article class="experience__element">
+            <p class="experience__date">Aug 2022 &rarr; Dec 2022</p>
+            <div class="experience__info">
+                <h3 class="experience__title">Research Assistant</h3>
+                <p class="experience__company">Centro de Investigacion en Computacion</p>
+            </div>
+        </article> <!-- Experience Element-->
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="skills__heading">My Skill Set</h2>
+        <ul class="skills__list">
+            <li class="skill">
+                <i class="fa-brands fa-php"></i>
+                PHP
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-github"></i>
+                Git / GitHub
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-unity"></i>
+                Unity
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-gamepad"></i>
+                C#
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-c"></i>
+                C / C++
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                CSS / SASS
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-html5"></i>
+                HTML
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-keyboard"></i>
+                VSCode
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-js"></i>
+                JavaScript
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-java"></i>
+                Java
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-python"></i>
+                Python
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                MySQL
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                SQL Server
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                PostgreSQL
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-solid fa-database"></i>
+                MongoDB
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-node"></i>
+                Node.js
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-react"></i>
+                React JS
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-docker"></i>
+                Docker
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-linux"></i>
+                Linux
+            </li> <!-- SKILL -->
+            <li class="skill">
+                <i class="fa-brands fa-npm"></i>
+                Npm
+            </li> <!-- SKILL -->
+        </ul>
+    </section>  
 
     <section id="certifications" class="certifications">
         <h2 class="certifications__heading">Certifications</h2>
@@ -287,75 +426,6 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
-        <h2 class="skills__heading">My Skill Set</h2>
-        <ul class="skills__list">
-            <li class="skill">
-                <i class="fa-brands fa-php"></i>
-                PHP
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-github"></i>
-                Git / GitHub
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-unity"></i>
-                Unity
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-gamepad"></i>
-                C#
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-c"></i>
-                C / C++
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-css3-alt"></i>
-                CSS / SASS
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-html5"></i>
-                HTML
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-keyboard"></i>
-                VSCode
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-js"></i>
-                JavaScript
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-java"></i>
-                Java
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-python"></i>
-                Python
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-database"></i>
-                MySQL
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-database"></i>
-                SQL Server
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-database"></i>
-                PostgreSQL
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-solid fa-database"></i>
-                MongoDB
-            </li> <!-- SKILL -->
-            <li class="skill">
-                <i class="fa-brands fa-node"></i>
-                Node.js
-            </li> <!-- SKILL -->
-        </ul>
-    </section>
 </body>
 
 <footer class="footer">
