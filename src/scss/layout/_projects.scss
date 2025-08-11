@@ -1,88 +1,88 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use "base/variables" as v;
+@use "base/mixins" as m;
 
-.projects{
-    @include m.container;
-    &__container{
-        @include m.tablet{
-            @include m.grid(2, 3rem);
-        }
-        @include m.desktop{
-            @include m.grid(3, 3rem);
-        }
-        @include m.grid(1, 3rem);
+.projects {
+  @include m.container;
+  &__container {
+    @include m.tablet {
+      @include m.grid(2, 3rem);
     }
+    @include m.desktop {
+      @include m.grid(3, 3rem);
+    }
+    @include m.grid(1, 3rem);
+  }
 }
 
-.project{
-    background-color: v.$background;
+.project {
+  background-color: v.$background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: 1px solid darken($color: v.$background, $amount: 5%);
+  transition: all 0.3s ease-in-out;
+  @include m.tablet {
+    &:hover {
+      scale: 1.05;
+    }
+  }
+  &--extend {
+    @include m.desktop {
+      grid-column: span 3;
+    }
+  }
+  &__info {
+    padding: 0 2rem;
+  }
+  &__image-container {
+    height: 20rem;
+    overflow: hidden;
+  }
+  &__image {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    color: v.$white;
+    text-align: left;
+    font-weight: v.$bold;
+    margin: 1rem 0;
+  }
+  &__description {
+    font-weight: v.$thin;
+    font-size: 1.7rem;
+    margin: 0;
+  }
+  &__technologies {
+    @include m.reset-list;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 3rem 0 1.5rem 0;
+    li {
+      @include m.tech;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    background-color: v.$green;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    border: 1px solid darken($color: v.$background, $amount: 5%);
-    transition: all .3s ease-in-out;
-    @include m.tablet{
-        &:hover{
-            scale: 1.05;
-        }
-    }
-    &--extend{
-        @include m.desktop{
-            grid-column: span 3;
-        }
-    }
-    &__info{
-        padding: 0 2rem;
-    }
-    &__image-container{
-        height: 20rem;
-        overflow: hidden;
-    }
-    &__image{
-        margin: 0;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    &__title{
-        color: v.$white;
-        text-align: left;
-        font-weight: v.$bold;
-        margin: 1rem 0;
-    }
-    &__description{
-        font-weight: v.$thin;
-        font-size: 1.7rem;
-        margin: 0;
-    }
-    &__technologies{
-        @include m.reset-list;
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin: 3rem 0 1.5rem 0;
-        li{
-            @include m.tech;
-        }
-    }
-
-    &__link{
-        display: block;
-        width: 100%;
-        background-color: v.$green;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        text-align: center;
-        padding: 1rem 0;
-        margin: auto 0 0 0;
-        justify-self: flex-end;
-        font-weight: v.$bold;
-        // @include m.button(v.$black, v.$white);
-        // width: auto;
-        // border-radius: 1rem;
-    }
+    text-align: center;
+    padding: 1rem 0;
+    margin: auto 0 0 0;
+    justify-self: flex-end;
+    font-weight: v.$bold;
+    // @include m.button(v.$black, v.$white);
+    // width: auto;
+    // border-radius: 1rem;
+  }
 }
