@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
 
 // Fonts
-$primary-font: 'Open Sans', sans-serif;
+$primary-font: "Open Sans", sans-serif;
 
 // Media Queries Sizes
 $phone: 480px;
@@ -13,18 +13,17 @@ $black: #000;
 
 $background: #11172a;
 $white: #dfe5ec;
-$gray: #626c7d;
-$light-gray: #B3AEA8;
+$gray: #a5aab3;
+$light-gray: #b3aea8;
 $green: #599692;
 $green-light: #7dd8d2;
 $green-dark: #59969248;
-
 
 // Spacing
 $gap: 5rem;
 
 // Fonts
 $thin: 300;
-$regular : 400;
+$regular: 400;
 $bold: 700;
-$black-font: 800
+$black-font: 800;
