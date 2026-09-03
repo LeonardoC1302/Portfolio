@@ -1,5 +1,6 @@
 import data from "./data/site";
 import Timeline from "./components/timeline";
+import HeaderNav from "./components/header";
 
 const EMAIL = data.contact.email;
 const LINKEDIN = data.contact.linkedin;
@@ -21,27 +22,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-bg text-ink">
       {/* ============ HEADER ============ */}
-      <header className="sticky top-0 z-20 border-b border-hairline bg-bg/85 backdrop-blur-sm">
-        <div className="container flex h-16 items-center justify-between">
-          <a
-            href="#top"
-            className="text-sm font-semibold tracking-tight text-ink"
-          >
-            {data.meta.name}
-          </a>
-          <nav aria-label="Primary" className="flex items-center gap-6 sm:gap-8">
-            {data.nav.links.map((l) => (
-              <a
-                key={l.id}
-                href={`#${l.id}`}
-                className="text-sm text-ink-muted transition-colors hover:text-ink"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </header>
+      <HeaderNav name={data.meta.name} links={data.nav.links} />
 
       <main id="top" className="flex-1">
         {/* ============ HERO ============ */}
@@ -49,7 +30,7 @@ export default function Home() {
           <p className="mb-6 text-sm font-medium tracking-wide text-accent">
             {data.hero.eyebrow}
           </p>
-          <h1 className="max-w-4xl font-serif text-5xl leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl font-serif text-4xl leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
             {data.hero.titleLine1}
             <br />
             <span className="text-ink-muted">{data.hero.titleLine2}</span>
@@ -86,11 +67,11 @@ export default function Home() {
 
         {/* ============ PROJECTS ============ */}
         <section id="projects" className="container pt-24 sm:pt-32">
-          <div className="mb-10 flex items-baseline justify-between border-b border-hairline pb-3">
-            <h2 className="font-serif text-3xl tracking-tight sm:text-4xl">
+          <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-hairline pb-3">
+            <h2 className="shrink-0 font-serif text-2xl tracking-tight sm:text-3xl lg:text-4xl">
               {data.projects.title}
             </h2>
-            <span className="text-sm text-ink-faint">
+            <span className="shrink-0 text-sm text-ink-faint">
               {data.projects.annotation}
             </span>
           </div>
@@ -129,11 +110,11 @@ export default function Home() {
 
         {/* ============ SKILLS ============ */}
         <section id="skills" className="container pt-24 sm:pt-32">
-          <div className="mb-10 flex items-baseline justify-between border-b border-hairline pb-3">
-            <h2 className="font-serif text-3xl tracking-tight sm:text-4xl">
+          <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-hairline pb-3">
+            <h2 className="shrink-0 font-serif text-2xl tracking-tight sm:text-3xl lg:text-4xl">
               {data.skills.title}
             </h2>
-            <span className="text-sm text-ink-faint">
+            <span className="shrink-0 text-sm text-ink-faint">
               {data.skills.annotation}
             </span>
           </div>
@@ -189,13 +170,13 @@ export default function Home() {
               <br />
               {data.contact.titleLine2}
             </h2>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+            <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-8">
               <a
                 href={`mailto:${EMAIL}`}
                 className="inline-flex items-center gap-2 rounded-full border border-accent/60 bg-accent/10 px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-bg-deep"
               >
-                {EMAIL}
-                <span aria-hidden="true">→</span>
+                {data.hero.emailCta}
+                <span className="shrink-0" aria-hidden="true">→</span>
               </a>
               <a
                 href={LINKEDIN}

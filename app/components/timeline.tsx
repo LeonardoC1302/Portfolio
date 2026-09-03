@@ -11,11 +11,11 @@ export default function Timeline({
 }) {
   return (
     <section id="experience" className="container pt-24 sm:pt-32">
-      <div className="mb-10 flex items-baseline justify-between border-b border-hairline pb-3">
-        <h2 className="font-serif text-3xl tracking-tight sm:text-4xl">
+      <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-hairline pb-3">
+        <h2 className="shrink-0 font-serif text-2xl tracking-tight sm:text-3xl lg:text-4xl">
           {title}
         </h2>
-        <span className="text-sm text-ink-faint">{annotation}</span>
+        <span className="shrink-0 text-sm text-ink-faint">{annotation}</span>
       </div>
 
       <ol className="relative ml-1 border-l border-hairline sm:ml-2">

@@ -1,5 +1,10 @@
 import site from "./site.json";
 
+export interface NavLink {
+  id: string;
+  label: string;
+}
+
 export interface ExperienceItem {
   company: string;
   position: string;
