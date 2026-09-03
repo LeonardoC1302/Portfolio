@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "name": "Leonardo Cespedes Tenorio",
+    "role": "Fullstack Engineer"
+  },
+  "nav": {
+    "links": [
+      {
+        "id": "experience",
+        "label": "Experience"
+      },
+      {
+        "id": "projects",
+        "label": "Projects"
+      },
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Fullstack Engineer",
+    "titleLine1": "I build digital products",
+    "titleLine2": "end to end.",
+    "intro": "From data pipelines and payment flows to the voice AI that talks to your users — I take products from a first idea to something people actually use.",
+    "emailCta": "Email me",
+    "linkedinLabel": "LinkedIn"
+  },
+  "experience": {
+    "title": "Experience",
+    "annotation": "Career timeline",
+    "items": [
+      {
+        "company": "Konrad Group",
+        "position": "Associate Software Developer",
+        "period": [
+          "2025",
+          "Present"
+        ],
+        "current": true,
+        "summary": "Full-stack developer building reservation and enterprise web platforms with modern JS frameworks and AEM.",
+        "highlights": [
+          "Built frontend features for an international tourism client's reservations app using React, Next.js, TypeScript, and GraphQL.",
+          "Developed full-stack solutions for a large-scale AEM initiative unifying multiple company sites into one domain.",
+          "Adopted advanced AEM concepts like live copies, blueprints, and deployment pipelines.",
+          "Integrated AI tools and agents into daily workflows to boost development efficiency."
+        ]
+      },
+      {
+        "company": "Konrad Group",
+        "position": "Software Developer Intern",
+        "period": [
+          "2025",
+          "2025"
+        ],
+        "current": false,
+        "summary": "Cross-functional intern building AEM components and backend integrations for a demo banking site.",
+        "highlights": [
+          "Collaborated with a 6-person dev team plus PM and Tech Lead to build an internal AEM template.",
+          "Built AEM components with React, TypeScript, SCSS, and native HTL/dialogs.",
+          "Implemented backend logic via Sling Models and Servlet-based API connections.",
+          "Delivered consistently under Agile/Scrum practices on a fixed academic timeline."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "annotation": "Selected projects",
+    "items": [
+      {
+        "name": "Perch",
+        "description": "Fullstack personal finance PWA to track accounts, budgets, and saving goals with live exchange rates and real-time investment data.",
+        "href": "https://github.com/LeonardoC1302/Budget-Management"
+      },
+      {
+        "name": "DevWebCamp",
+        "description": "Fullstack conference website with user registration, PayPal-powered paid passes, and an admin dashboard for managing events and content.",
+        "href": "https://github.com/LeonardoC1302/DevWebCamp"
+      },
+      {
+        "name": "PrepWise",
+        "description": "AI-powered mock interview app that lets users practice interviews with a voice AI agent and receive performance feedback.",
+        "href": "https://github.com/LeonardoC1302/Interview-AI-Platform"
+      }
+    ],
+    "linkLabel": "View repository"
+  },
+  "skills": {
+    "title": "Skills",
+    "annotation": "Fullstack breadth",
+    "disciplines": [
+      {
+        "name": "Frontend",
+        "slots": [
+          "JavaScript, TypeScript, React, Next.js",
+          "HTML, CSS, SASS, Tailwind CSS",
+          "Adobe Experience Manager"
+        ]
+      },
+      {
+        "name": "Backend",
+        "slots": [
+          "Node.js, Express",
+          "GraphQL",
+          "Java, PHP, Python"
+        ]
+      },
+      {
+        "name": "Data & Infra",
+        "slots": [
+          "MySQL, PostgreSQL, SQLite, Firebase",
+          "Data Visualization / Charting",
+          "Data Architecture"
+        ]
+      },
+      {
+        "name": "AI",
+        "slots": [
+          "Claude, Impeccable Skills",
+          "AI Agents & Workflow Integration",
+          "AI-Assisted Development"
+        ]
+      },
+      {
+        "name": "Soft Skills",
+        "slots": [
+          "Agile / Scrum",
+          "Cross-Functional Collaboration",
+          "Adapting to Shifting Deadlines",
+          "Communication, Time Management",
+          "Problem Solving"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "titleLine1": "Open to new opportunities.",
+    "titleLine2": "Let's talk.",
+    "email": "leonardo.cespedes1302@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/leonardocespedest/",
+    "linkedinLabel": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2026 Leonardo Cespedes Tenorio",
+    "statusLabel": "Available for work"
+  }
+}

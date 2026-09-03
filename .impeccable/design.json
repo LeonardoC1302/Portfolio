@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-03T00:27:53.000Z",
+  "title": "Design System: Warm Refined Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Ground", "canonical": "#141310", "tonalRamp": ["oklch(15% 0.017 45)", "oklch(26% 0.017 45)", "oklch(38% 0.017 45)", "oklch(49% 0.017 45)", "oklch(61% 0.017 45)", "oklch(72% 0.017 45)", "oklch(83% 0.017 45)", "oklch(95% 0.017 45)"] },
+      "bg-deep": { "role": "neutral", "displayName": "Ground Deep", "canonical": "#0f0e0c", "tonalRamp": ["oklch(15% 0.017 40)", "oklch(26% 0.017 40)", "oklch(38% 0.017 40)", "oklch(49% 0.017 40)", "oklch(61% 0.017 40)", "oklch(72% 0.017 40)", "oklch(83% 0.017 40)", "oklch(95% 0.017 40)"] },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#1b1a16", "tonalRamp": ["oklch(15% 0.015 48)", "oklch(26% 0.015 48)", "oklch(38% 0.015 48)", "oklch(49% 0.015 48)", "oklch(61% 0.015 48)", "oklch(72% 0.015 48)", "oklch(83% 0.015 48)", "oklch(95% 0.015 48)"] },
+      "surface-raised": { "role": "neutral", "displayName": "Surface Raised", "canonical": "#201e1a", "tonalRamp": ["oklch(15% 0.016 40)", "oklch(26% 0.016 40)", "oklch(38% 0.016 40)", "oklch(49% 0.016 40)", "oklch(61% 0.016 40)", "oklch(72% 0.016 40)", "oklch(83% 0.016 40)", "oklch(95% 0.016 40)"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#ece8e1", "tonalRamp": ["oklch(15% 0.034 38)", "oklch(26% 0.034 38)", "oklch(38% 0.034 38)", "oklch(49% 0.034 38)", "oklch(61% 0.034 38)", "oklch(72% 0.034 38)", "oklch(83% 0.034 38)", "oklch(95% 0.034 38)"] },
+      "ink-soft": { "role": "neutral", "displayName": "Ink Soft", "canonical": "#c8c3ba", "tonalRamp": ["oklch(15% 0.017 39)", "oklch(26% 0.017 39)", "oklch(38% 0.017 39)", "oklch(49% 0.017 39)", "oklch(61% 0.017 39)", "oklch(72% 0.017 39)", "oklch(83% 0.017 39)", "oklch(95% 0.017 39)"] },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted", "canonical": "#9a948a", "tonalRamp": ["oklch(15% 0.011 38)", "oklch(26% 0.011 38)", "oklch(38% 0.011 38)", "oklch(49% 0.011 38)", "oklch(61% 0.011 38)", "oklch(72% 0.011 38)", "oklch(83% 0.011 38)", "oklch(95% 0.011 38)"] },
+      "ink-faint": { "role": "neutral", "displayName": "Ink Faint", "canonical": "#8a857b", "tonalRamp": ["oklch(15% 0.009 40)", "oklch(26% 0.009 40)", "oklch(38% 0.009 40)", "oklch(49% 0.009 40)", "oklch(61% 0.009 40)", "oklch(72% 0.009 40)", "oklch(83% 0.009 40)", "oklch(95% 0.009 40)"] },
+      "accent": { "role": "primary", "displayName": "Amber", "canonical": "#d9a462", "tonalRamp": ["oklch(15% 0.092 33)", "oklch(26% 0.092 33)", "oklch(38% 0.092 33)", "oklch(49% 0.092 33)", "oklch(61% 0.092 33)", "oklch(72% 0.092 33)", "oklch(83% 0.092 33)", "oklch(95% 0.092 33)"] },
+      "accent-strong": { "role": "primary", "displayName": "Amber Strong", "canonical": "#e8bd83", "tonalRamp": ["oklch(15% 0.103 34)", "oklch(26% 0.103 34)", "oklch(38% 0.103 34)", "oklch(49% 0.103 34)", "oklch(61% 0.103 34)", "oklch(72% 0.103 34)", "oklch(83% 0.103 34)", "oklch(95% 0.103 34)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Serif", "purpose": "The name and section headings only — Newsreader, warm and calm." },
+      "body": { "displayName": "Body Sans", "purpose": "Descriptions, intro, UI — Manrope, crisp and modern." },
+      "label": { "displayName": "Label", "purpose": "Eyebrow, captions, and small annotations." }
+    },
+    "motion": [
+      { "name": "card-lift", "value": "all 0.25s ease", "purpose": "Project card hover — 2px lift, border to amber soft, background step." },
+      { "name": "link-fade", "value": "color 0.2s ease", "purpose": "Link and nav color transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Email Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary action — a pill with a translucent amber border and fill, filling solid amber on hover.",
+      "html": "<a class=\"ds-btn-email\" href=\"mailto:you@example.com\">Email me <span>→</span></a>",
+      "css": ".ds-btn-email { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; border: 1px solid rgba(217,164,98,0.6); background: rgba(217,164,98,0.1); color: #d9a462; padding: 12px 24px; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: background-color 0.2s ease, color 0.2s ease; } .ds-btn-email:hover { background: #d9a462; color: #0f0e0c; } .ds-btn-email:focus-visible { outline: 1px solid #e8bd83; outline-offset: 3px; }"
+    },
+    {
+      "name": "Nav",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky blurred top bar with name and anchored links.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-name\" href=\"#top\">Leonardo Cespedes Tenorio</a><nav><a href=\"#work\">Work</a><a href=\"#skills\">Skills</a><a href=\"#contact\">Contact</a></nav></header>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; border-bottom: 1px solid rgba(236,232,225,0.09); background: rgba(20,19,16,0.85); backdrop-filter: blur(8px); } .ds-nav-name { font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 600; color: #ece8e1; text-decoration: none; } .ds-nav nav { display: flex; gap: 24px; } .ds-nav nav a { font-family: 'Manrope', sans-serif; font-size: 14px; color: #9a948a; text-decoration: none; transition: color 0.2s; } .ds-nav nav a:hover { color: #ece8e1; } .ds-nav a:focus-visible { outline: 1px solid #d9a462; outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A project surface: amber index, serif name, muted description, accent link. Lifts 2px with an amber border on hover.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-index\">01</span><h3 class=\"ds-card-name\">Perch</h3><p class=\"ds-card-desc\">Fullstack personal finance PWA.</p><a class=\"ds-card-link\" href=\"#\">View repository ↗</a></article>",
+      "css": ".ds-card { display: flex; flex-direction: column; border-radius: 12px; border: 1px solid rgba(236,232,225,0.09); background: #1b1a16; padding: 28px; font-family: 'Manrope', sans-serif; transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease; } .ds-card:hover, .ds-card:focus-within { border-color: rgba(217,164,98,0.45); background: #201e1a; transform: translateY(-2px); } .ds-card-index { color: #d9a462; font-size: 14px; font-weight: 500; margin-bottom: 32px; } .ds-card-name { font-family: 'Newsreader', serif; font-size: 24px; font-weight: 400; color: #ece8e1; margin: 0; } .ds-card-desc { color: #9a948a; font-size: 14px; line-height: 1.65; margin: 12px 0 0; } .ds-card-link { margin-top: 24px; color: #d9a462; font-size: 14px; font-weight: 500; text-decoration: none; } .ds-card:focus-within .ds-card-link:focus-visible { outline: 1px solid #e8bd83; outline-offset: 3px; }"
+    },
+    {
+      "name": "Discipline List",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "A skill discipline group: name and index above a hairline rule, muted placeholder slots.",
+      "html": "<div class=\"ds-disc\"><div class=\"ds-disc-head\"><h4>Frontend</h4><span>01</span></div><ul><li>Language / Library <span>—</span></li></ul></div>",
+      "css": ".ds-disc { font-family: 'Manrope', sans-serif; } .ds-disc-head { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid rgba(236,232,225,0.09); padding-bottom: 8px; margin-bottom: 20px; } .ds-disc-head h4 { font-size: 16px; font-weight: 600; color: #ece8e1; margin: 0; } .ds-disc-head span { font-size: 12px; color: #8a857b; } .ds-disc ul { list-style: none; margin: 0; padding: 0; } .ds-disc li { display: flex; align-items: center; justify-content: space-between; color: #9a948a; font-size: 14px; line-height: 2.4; } .ds-disc li span { color: #8a857b; font-size: 12px; }"
+    },
+    {
+      "name": "Contact Panel",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A large rounded panel closing the page — amber eyebrow, serif headline, email + LinkedIn.",
+      "html": "<section class=\"ds-contact\"><p class=\"ds-contact-eyebrow\">Get in touch</p><h2 class=\"ds-contact-title\">Open to new opportunities. Let's talk.</h2><a class=\"ds-contact-mail\" href=\"mailto:you@example.com\">you@example.com →</a></section>",
+      "css": ".ds-contact { border-radius: 16px; border: 1px solid rgba(236,232,225,0.09); background: #1b1a16; padding: 48px 64px; } .ds-contact-eyebrow { margin: 0 0 16px; color: #d9a462; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500; } .ds-contact-title { font-family: 'Newsreader', serif; font-size: 36px; font-weight: 400; line-height: 1.2; color: #ece8e1; margin: 0 0 32px; } .ds-contact-mail { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; border: 1px solid rgba(217,164,98,0.6); background: rgba(217,164,98,0.1); color: #d9a462; padding: 12px 24px; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; } .ds-contact-mail:hover { background: #d9a462; color: #0f0e0c; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Workbench",
+    "overview": "A calm, minimal, dark portfolio for a fullstack engineer. The page is a warm near-black field with generous whitespace, a single understated amber accent, and a typographic orderliness that lets the work speak. It is deliberately anti-chrome: no neon, no glass overlays, no technical costume. Instead it relies on warm tonal depth, hairline rules, one refined serif used for the voice, and a clean geometric sans for everything else. The design reads premium rather than loud. Light is absent; warmth comes from the slight brown cast of the near-black ground and the amber accent.",
+    "keyCharacteristics": [
+      "Warm off-black field, never pure black and never a cold slate",
+      "A single amber accent used sparingly — links, focus, the eyebrow, the index numerals",
+      "Refined serif display (Newsreader) for name and headings over a clean sans (Manrope)",
+      "Generous, calm vertical rhythm and a wide max-width measure",
+      "Hairline rules and soft 1rem-radius surfaces; subtle lift on hover",
+      "A blurred sticky header with anchored navigation"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Amber is the only saturated color and it appears sparingly — the eyebrow, links, focus, and a numeral at a time. Its rarity is its power; it never becomes a fill over a populated area.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Newsreader owns the names and headings; Manrope owns everything else. Never set a headline in the sans or body copy in the serif.", "section": "typography" },
+      { "name": "The Flat-by-Default Rule", "body": "Surfaces are flat at rest. The only elevation is a 2px hover lift and a background step; no offsets, no shadows, no glow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use the warm near-black field and brown-tinted neutrals; never drift to pure black or cold slate.",
+      "Do reserve amber for the accent roles — eyebrow, links, focus, index numerals.",
+      "Do set the name and headings in Newsreader and all body/UI in Manrope.",
+      "Do give the layout generous space and a wide measure; calm is the point.",
+      "Do keep surfaces flat and tonal with hairline rules and a soft 1rem radius.",
+      "Do dim and label placeholder content (the skills slots) rather than inventing claims."
+    ],
+    "donts": [
+      "Don't add chrome — no glows, glass panels, gradients, or neon accents; the surface is quiet.",
+      "Don't use a second saturated color; amber is the only accent.",
+      "Don't set headlines in the sans or body in the serif.",
+      "Don't introduce heavy shadows or floating depth; depth is hairline and tonal.",
+      "Don't clutter the header or add more than the anchored links, name, and contact CTA."
+    ]
+  }
+}
