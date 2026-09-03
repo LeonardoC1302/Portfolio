@@ -22,17 +22,26 @@ export default function Timeline({
         {items.map((item, i) => (
           <li key={`${item.company}-${i}`} className="relative pb-12 pl-6 last:pb-0 sm:pl-8">
             <span
-              className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full border border-accent bg-bg"
+              className={`absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full border border-accent ${
+                item.current ? "bg-accent" : "bg-bg"
+              }`}
               aria-hidden="true"
             >
-              <span className="absolute inset-0 rounded-full bg-accent" />
+              {item.current ? (
+                <span className="absolute inset-0 rounded-full bg-accent" />
+              ) : null}
             </span>
 
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
               <h3 className="font-serif text-2xl tracking-tight text-ink">
                 {item.company}
               </h3>
-              <span className="shrink-0 text-sm text-ink-faint">
+              <span className="flex shrink-0 items-center gap-2 text-sm text-ink-faint">
+                {item.current && (
+                  <span className="rounded-full border border-accent/60 bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                    Current
+                  </span>
+                )}
                 {item.period.join(" — ")}
               </span>
             </div>
